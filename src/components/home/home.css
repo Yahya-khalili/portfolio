@@ -1,0 +1,202 @@
+.home__container {
+    row-gap: 5rem; /* Reduced gap for smaller screens */
+}
+
+.home__content {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Keep 2 columns for larger screens */
+    padding-top: 5.5rem;
+    column-gap: 2rem; /* Slightly reduce column gap for better spacing */
+    align-items: start;
+}
+
+/* Social Icons */
+.home__social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home__social-icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+.home__social-icon:hover {
+    color: var(--title-color-dark);
+}
+
+/* Title and Description */
+.home__title {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-0-25);
+    display: flex;
+    align-items: center;
+}
+
+.home__hand {
+    width: 38px;
+    margin-left: 0.4rem;
+}
+
+.home__subtitle {
+    position: relative;
+    font-size: var(--h3-font-size);
+    padding-left: 5.4rem;
+    font-weight: var(--font-normal);
+    margin-bottom: var(--mb-1);
+}
+
+.home__subtitle::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: var(--text-color);
+    left: 0;
+    top: 1rem;
+}
+
+.home__description {
+    max-width: 600px;
+    margin-bottom: var(--mb-3);
+    line-height: 1.6;
+    font-size: var(--normal-font-size);
+    text-align: justify;
+}
+
+/* Scroll Animation */
+.home__scroll {
+    margin-left: 9.25rem;
+}
+
+.wheel {
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(3.75rem);
+    }
+}
+
+.home__scroll-name {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+    margin-left: 2px;
+}
+
+.home___scroll-arrow {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+/* Adjust for Medium Screens */
+@media screen and (max-width: 992px) {
+    .home__content {
+        grid-template-columns: 100px 1fr;
+        column-gap: 1.5rem;
+    }
+
+    .home__hand {
+        width: 26px;
+    }
+
+    .home__subtitle {
+        padding-left: 3.75rem;
+        margin-bottom: var(--mb-1);
+    }
+
+    .home__subtitle::before {
+        width: 42px;
+        top: 0.8rem;
+    }
+
+    .home__description {
+        max-width: initial;
+        margin-bottom: var(--mb-2-5);
+    }
+
+    .home__scroll {
+        margin-left: 7.5rem;
+    }
+}
+
+/* Adjust for Tablet Screens */
+@media screen and (max-width: 768px) {
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3.5rem;
+    }
+
+    .home__data {
+        order: 1;
+         /* Center-align text for mobile */
+    }
+
+    .home__social {
+        order: 2; /* Position the social section at the bottom */
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        
+        /* Add space above the social icons */
+    }
+
+    .home__scroll {
+        display: none; /* Hide the scroll for mobile */
+    }
+}
+
+/* Adjust for Small Devices */
+@media screen and (max-width: 576px) {
+    .home__title {
+        font-size: var(--h2-font-size);
+    }
+
+    .home__hand {
+        width: 22px;
+        height: 22px;
+    }
+
+    .button {
+        padding: 0.75rem 1.5rem; /* Smaller padding for smaller screens */
+    }
+
+    .button__icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Adjust for Extra Small Devices */
+@media screen and (max-width: 350px) {
+    .home__container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .home__title {
+        font-size: var(--normal-font-size);
+    }
+
+    .home__subtitle {
+        padding-left: 2.5rem;
+    }
+
+    .button {
+        padding: 0.5rem 1.25rem;
+    }
+
+    .button__icon {
+        width: 18px;
+        height: 18px;
+    }
+}

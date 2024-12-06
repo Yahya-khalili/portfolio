@@ -1,0 +1,121 @@
+.skills__box {
+    display: flex; /* Flexbox for horizontal alignment */
+    flex-wrap: wrap; /* Wrap the content to the next row if it overflows */
+    gap: 2rem; /* Adds spacing between items */
+    justify-content: center; /* Centers the items horizontally */
+}
+
+.skills__group {
+    display: flex;
+    flex-direction: row; /* Aligns items in a row */
+    flex-wrap: wrap; /* Allows items to wrap to the next row if needed */
+    gap: 2rem; /* Adds spacing between groups */
+}
+
+.skills__data {
+    display: flex;
+    flex-direction: column; /* Stacks icon and text vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Aligns text centrally */
+    gap: 0.5rem; /* Adds space between icon and text */
+}
+
+.skills__content {
+    display: flex;
+    flex-direction: column; /* Stacks title and content vertically */
+    gap: 1.5rem; /* Adds space between title and items */
+    padding: 2rem;
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.25em;
+}
+
+.skills__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 auto; /* Centers the title block horizontally */
+    display: flex;
+    justify-content: center; /* Aligns the content horizontally */
+    align-items: center; /* Aligns the content vertically */
+}
+.skills__data i {
+    font-size: 2rem; /* Increases the size of the icons */
+    width: 3rem; /* Adds a bit more width */
+    height: 3rem; /* Adds a bit more height */
+    display: inline-block; /* Ensures the icon behaves like a block element */
+    text-align: center; /* Centers the content inside */
+    line-height: 3rem; /* Ensures vertical alignment */
+    margin-bottom: 1rem; /* Adds space below the icon */
+}
+
+
+@media screen and (max-width: 992px) {
+    .skills__container {
+        grid-template-columns: repeat(1, 100%); /* Show two columns */
+        column-gap: 2rem; /* Reduce spacing */
+    }
+
+    .skills__data i {
+        font-size: 2.5rem; /* Slightly smaller icons */
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* For medium devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .skills__container {
+        grid-template-columns: repeat(1, 100%); /* Single column */
+        row-gap: 2rem; /* Add vertical spacing between items */
+    }
+
+    .skills__content {
+        padding: 1.5rem 2rem; /* Reduce padding */
+    }
+
+    .skills__data i {
+        font-size: 2rem; /* Smaller icons */
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* For small devices (max-width: 576px) */
+@media screen and (max-width: 576px) {
+    .skills__container {
+        grid-template-columns: repeat(1, 100%);
+        padding: 0 1rem; /* Add horizontal padding for small screens */
+    }
+
+    .skills__content {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .skills__data i {
+        font-size: 1.8rem;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .skills__title {
+        font-size: 1rem; /* Smaller title font size */
+    }
+}
+
+/* For very small devices (max-width: 350px) */
+@media screen and (max-width: 350px) {
+    .skills__content {
+        padding: 1rem 1rem; /* Minimized padding */
+    }
+
+    .skills__data i {
+        font-size: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .skills__title {
+        font-size: 0.9rem; /* Further reduce title font size */
+    }
+}
